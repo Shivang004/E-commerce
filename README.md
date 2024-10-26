@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Product Management System
+
+This project is a Product Management System for managing products in a basic e-commerce setup. It allows users to view, add, edit, and delete products, with basic authentication. Built using **React** (Next.js), **Node.js**, and **PostgreSQL**, this application showcases full-stack development with JWT-based authentication and deployment readiness.
+
+## Live Demo
+
+[Live Demo on Vercel](https://your-app-url.vercel.app) (replace with actual URL if deployed)
+
+## Features
+
+### Frontend
+- **Product Listing Page**: View a list of products with details like name, description, price, and quantity.
+- **Add Product**: Form to add a new product.
+- **Edit Product**: Option to edit an existing product's details.
+- **Delete Product**: Option to delete a product from the list.
+- **Styling**: Basic CSS and optional Bootstrap integration.
+
+### Backend
+- **API Endpoints**:
+  - `GET /products`: Fetches all products.
+  - `POST /products`: Adds a new product.
+  - `PUT /products/:id`: Updates an existing product.
+  - `DELETE /products/:id`: Deletes a product.
+- **Authentication**: JWT-based authentication for add, edit, and delete operations.
+
+### Database
+- PostgreSQL Database with tables:
+  - `products`: Stores product information.
+  - `users`: Stores user credentials for authentication.
+
+### Optional Features
+- **Unit Tests**: API route tests using Jest and Supertest.
+- **Deployment**: Hosted on Vercel.
+
+---
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Node.js** and **npm**
+- **PostgreSQL**
+- **Git**
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Clone the Repository**:
+   ```
+   git clone https://github.com/yourusername/product-management-system.git
+   cd product-management-system
+   ```
+2. **Install Dependencies**:
+- Install server-side dependencies:
+    ```
+    cd backend
+    npm install
+    ```
+3. Install client-side dependencies:
+   ```
+   cd backend
+    ```
+3. **Set up PostgreSQL Database**:
+- Start PostgreSQL and create a database named product_management.
+- Create the products and users tables:
+    ```
+    CREATE DATABASE product_management;
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+    \c product_management;
 
-## Learn More
+    CREATE TABLE products (
+        id SERIAL PRIMARY KEY,
+        name TEXT NOT NULL,
+        description TEXT,
+        price FLOAT NOT NULL,
+        quantity INTEGER NOT NULL
+    );
 
-To learn more about Next.js, take a look at the following resources:
+    CREATE TABLE users (
+        id SERIAL PRIMARY KEY,
+        username VARCHAR(50) UNIQUE NOT NULL,
+        password TEXT NOT NULL
+    );
+    ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. **Environment Variables**:
+- Create a .env file in the backend directory with the following contents:.
+    ```
+    DATABASE_URL=postgresql://<username>:<password>@localhost:5432/product_management
+    JWT_SECRET=your_jwt_secret
+    ```
+- Replace ```<username>``` and ```<password>``` with your PostgreSQL credentials and set a value for JWT_SECRET.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+5. **Running the Backend**:
+- In the backend directory, start the server:.
+    ```
+    node server.js
+    ```
+6. **Running the Frontend**:
+- In the frontend directory, start the React application:.
+    ```
+    npm run dev
+    ```
+7. **Accessing the Application**:
+- Open a browser and go to ```http://localhost:3001``` to view the frontend.
+- The backend server is running on ```http://localhost:3000```.
 
-## Deploy on Vercel
+## API Endpoints
+**The following API endpoints are available:**
+- GET /products - Fetch all products
+- POST /products - Add a new product (requires authentication)
+- PUT /products/
+- Edit an existing product (requires authentication)
+- DELETE /products/
+- Delete a product (requires authentication)
+- POST /auth/login - Log in and receive a JWT token
+- POST /auth/register - Register a new user
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Authentication
+- Only authenticated users can add, edit, or delete products.
+- Use the /auth/login endpoint to log in and receive a token, then include the token in the Authorization header for protected requests.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Testing
+To run tests for the API, run the following command in the backend directory:
+    ```
+    npm test
+    ```
