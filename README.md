@@ -123,6 +123,7 @@ This project is a Product Management System for managing products in a basic e-c
 
 ## Authentication
 - Only authenticated users can add, edit, or delete products.
+- Use the /auth/login endpoint to log in and receive a JWT token, then include the token in the Authorization header for protected requests.
 
 ## Testing
 To run tests for the API, run the following command in the backend directory:
