@@ -46,19 +46,16 @@ This project is a Product Management System for managing products in a basic e-c
 
 1. **Clone the Repository**:
    ```
-   git clone https://github.com/yourusername/product-management-system.git
-   cd product-management-system
+   git clone https://github.com/Shivang004/E-commerce.git
+   cd E-commerce
    ```
 2. **Install Dependencies**:
 - Install server-side dependencies:
     ```
-    cd backend
+    cd my-backend
     npm install
     ```
-3. Install client-side dependencies:
-   ```
-   cd backend
-    ```
+
 3. **Set up PostgreSQL Database**:
 - Start PostgreSQL and create a database named product_management.
 - Create the products and users tables:
