@@ -103,7 +103,7 @@ This project is a Product Management System for managing products in a basic e-c
     });
 
     ```
-- Replace ```<user>``` and ```<password>``` with your PostgreSQL credentials and set a value for JWT_SECRET.
+- Replace ```<user>``` and ```<password>``` with your PostgreSQL credentials.
 
 5. **Running the Backend**:
 - In the backend directory, start the server:.
