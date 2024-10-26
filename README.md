@@ -1,10 +1,13 @@
 # Product Management System
 
-This project is a Product Management System for managing products in a basic e-commerce setup. It allows users to view, add, edit, and delete products, with basic authentication. Built using **React** (Next.js), **Node.js**, and **PostgreSQL**, this application showcases full-stack development with JWT-based authentication and deployment readiness.
+This project is a Product Management System for managing products in a basic e-commerce setup. It allows users to view, add, edit, and delete products, with basic login based authentication. Built using **React** (Next.js), **Node.js**, and **PostgreSQL**, this application showcases full-stack development with JWT-based authentication and deployment readiness.
 
 ## Live Demo
 
 [Live Demo on Vercel](https://e-commerce-silk-iota-15.vercel.app/) (Only frontend is working now, backend is yet to be integrated soon)
+
+![Preview](image.png)
+
 
 ## Features
 
@@ -119,7 +122,6 @@ This project is a Product Management System for managing products in a basic e-c
 - DELETE /products/
 - Delete a product (requires authentication)
 - POST /auth/login - Log in and receive a JWT token
-- POST /auth/register - Register a new user
 
 ## Authentication
 - Only authenticated users can add, edit, or delete products.
