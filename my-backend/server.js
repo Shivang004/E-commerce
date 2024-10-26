@@ -103,21 +103,6 @@ app.delete('/products/:id', verifyToken, async (req, res) => {
     }
 });
 
-// Example route to create a new user (you can remove or modify as needed)
-app.post('/auth/register', async (req, res) => {
-    const { username, password } = req.body;
-    try {
-        const hashedPassword = await bcrypt.hash(password, 10);
-        const result = await pool.query(
-            'INSERT INTO users (username, password) VALUES ($1, $2) RETURNING *',
-            [username, hashedPassword]
-        );
-        res.status(201).json(result.rows[0]);
-    } catch (error) {
-        console.error("User registration error:", error);
-        res.status(400).send('Username already exists or bad request');
-    }
-});
 
 app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
