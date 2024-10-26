@@ -130,3 +130,20 @@ To run tests for the API, run the following command in the backend directory:
     cd tests
     npm jest
     ```
+## Results
+ PASS  ./server.test.js
+  Product Management API
+    √ should fetch all products (8 ms)                                                                                                              
+    √ should add a new product (5 ms)                                                                                                               
+    √ should not add a product with invalid data (4 ms)                                                                                             
+    √ should update a product with valid token (11 ms)                                                                                              
+    √ should not update a product without token (6 ms)                                                                                              
+    √ should delete a product with valid token (10 ms)                                                                                              
+    √ should not delete a product without token (6 ms)                                                                                              
+    √ should fail login with incorrect credentials (5 ms)                                                                                           
+                                                                                                                                                    
+Test Suites: 1 passed, 1 total                                                                                                                      
+Tests:       8 passed, 8 total                                                                                                                      
+Snapshots:   0 total
+Time:        1.388 s, estimated 2 s
+Ran all test suites.
