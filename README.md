@@ -4,7 +4,7 @@ This project is a Product Management System for managing products in a basic e-c
 
 ## Live Demo
 
-[Live Demo on Vercel](https://your-app-url.vercel.app) (replace with actual URL if deployed)
+[Live Demo on Vercel](https://e-commerce-silk-iota-15.vercel.app/) (Only frontend is working now, backend is yet to be integrated soon)
 
 ## Features
 
@@ -123,10 +123,10 @@ This project is a Product Management System for managing products in a basic e-c
 
 ## Authentication
 - Only authenticated users can add, edit, or delete products.
-- Use the /auth/login endpoint to log in and receive a token, then include the token in the Authorization header for protected requests.
 
 ## Testing
 To run tests for the API, run the following command in the backend directory:
     ```
-    npm test
+    cd tests
+    npm jest
     ```
