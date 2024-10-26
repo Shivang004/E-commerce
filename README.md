@@ -30,6 +30,10 @@ This project is a Product Management System for managing products in a basic e-c
 - PostgreSQL Database with tables:
   - `products`: Stores product information.
   - `users`: Stores user credentials for authentication.
+ 
+### Dataset Used
+- ```Online Sales Data.csv```
+- It was taken from kaggle
 
 ### Optional Features
 - **Unit Tests**: API route tests using Jest and Supertest.
