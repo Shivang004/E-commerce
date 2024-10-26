@@ -50,10 +50,18 @@ This project is a Product Management System for managing products in a basic e-c
    cd E-commerce
    ```
 2. **Install Dependencies**:
+- Install app dependencies:
+    ```
+    npm install
+    ```
+
 - Install server-side dependencies:
     ```
     cd my-backend
     npm install
+    ```
+   ```
+    npm run build
     ```
 
 3. **Set up PostgreSQL Database**:
