@@ -60,7 +60,8 @@ This project is a Product Management System for managing products in a basic e-c
     cd my-backend
     npm install
     ```
-   ```
+    ```
+    cd..
     npm run build
     ```
 
