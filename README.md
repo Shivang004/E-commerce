@@ -91,13 +91,19 @@ This project is a Product Management System for managing products in a basic e-c
     );
     ```
 
-4. **Environment Variables**:
-- Create a .env file in the backend directory with the following contents:.
+4. **Database Variables**:
+- Modify the database credentials in my-backend/server.js with the following contents:.
     ```
-    DATABASE_URL=postgresql://<username>:<password>@localhost:5432/product_management
-    JWT_SECRET=your_jwt_secret
+    const pool = new Pool({
+        user: 'postgres',
+        host: 'localhost',
+        database: 'product_management',
+        password: '1234',
+        port: 5432,
+    });
+
     ```
-- Replace ```<username>``` and ```<password>``` with your PostgreSQL credentials and set a value for JWT_SECRET.
+- Replace ```<user>``` and ```<password>``` with your PostgreSQL credentials and set a value for JWT_SECRET.
 
 5. **Running the Backend**:
 - In the backend directory, start the server:.
