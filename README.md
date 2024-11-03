@@ -4,7 +4,7 @@ This project is a Product Management System for managing products in a basic e-c
 
 ## Live Demo
 
-[Live Demo on Vercel](https://e-commerce-silk-iota-15.vercel.app/) (Only frontend is working now, backend is yet to be integrated soon)
+[Live Demo on Vercel](https://product-management-5ko7h4it6-shivang004s-projects.vercel.app/) (Only frontend is working now, backend is yet to be integrated soon)
 
 ![Preview](image.png)
 
